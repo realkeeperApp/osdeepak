@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>This is Static Data</h1>
     <h1 class="Value"></h1>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script>
