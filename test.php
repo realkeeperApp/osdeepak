@@ -1,9 +1,22 @@
 <?php
-$conn = mysqli_connect("localhost","grac_deepak","deepak@2","grac_deepak");
-if($conn){
-    echo "Database connection established";
-}else{
-    echo "Failed";
+$conn = mysqli_connect("localhost", "grac_deepak", "deepak@2", "grac_deepak");
+
+if ($conn) {
+    echo "Database connection established.<br>";
+
+    // Read the SQL file
+    $sql = file_get_contents("db.sql");
+
+    // Execute the SQL script
+    if (mysqli_multi_query($conn, $sql)) {
+        echo "Table 'user' created successfully.";
+    } else {
+        echo "Error executing SQL file: " . mysqli_error($conn);
+    }
+
+    mysqli_close($conn);
+} else {
+    echo "Failed to connect to the database.";
 }
 ?>
 <!DOCTYPE html>
