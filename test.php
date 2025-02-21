@@ -16,7 +16,7 @@
                 url: "code.php",
                 data: {test:true},
                 success: function (response) {
-                    $(".value").text(response);
+                    $(".Value").text(response);
                 }
             });
         }
